@@ -1,5 +1,6 @@
 package com.example.couponapi.service;
 
+import com.example.couponcore.component.DistributeLockExecutor;
 import com.example.couponapi.controller.dto.CouponIssueRequestDto;
 import com.example.couponcore.service.CouponIssueService;
 import lombok.RequiredArgsConstructor;
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class CouponIssueRequestService {
     private final CouponIssueService couponIssueService;
+    private final DistributeLockExecutor distributeLockExecutor;
     private final Logger log = LoggerFactory.getLogger(this.getClass().getSimpleName());
 
     public void issueRequestV1(CouponIssueRequestDto requestDto) {
