@@ -2,7 +2,7 @@ package com.example.couponcore.service;
 
 import com.example.couponcore.component.DistributeLockExecutor;
 import com.example.couponcore.exception.CouponIssueException;
-import com.example.couponcore.model.Coupon;
+//import com.example.couponcore.model.Coupon;
 import com.example.couponcore.repository.redis.RedisRepository;
 import com.example.couponcore.repository.redis.dto.CouponIssueRequest;
 import com.example.couponcore.repository.redis.dto.CouponRedisEntity;
@@ -12,7 +12,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import static com.example.couponcore.exception.ErrorCode.FAIL_COUPON_ISSUE_REQUEST;
-import static com.example.couponcore.exception.ErrorCode.*;
+//import static com.example.couponcore.exception.ErrorCode.*;
 import static com.example.couponcore.util.CouponRedisUtils.getIssueRequestKey;
 import static com.example.couponcore.util.CouponRedisUtils.getIssueRequestQueueKey;
 
