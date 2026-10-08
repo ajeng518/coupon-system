@@ -46,7 +46,7 @@ public class Coupon extends BaseTimeEntity {
     @Column(nullable = false)
     private LocalDateTime dateIssueEnd;
 
-    public boolean availableIssueQiantity(){
+    public boolean availableIssueQuantity(){
         if(totalQuantity == null){
             return true;
         }
@@ -65,7 +65,7 @@ public class Coupon extends BaseTimeEntity {
     }
 
     public void issue(){
-        if(!availableIssueQiantity()){
+        if(!availableIssueQuantity()){
             throw new CouponIssueException(INVALID_COUPON_ISSUE_QUANTITY, "발급 간으한 수량을 초과합니다. 샛미 : %s, issued: %s".formatted(totalQuantity, issuedQuantity));
         }
         if(!availableIssueDate()){
